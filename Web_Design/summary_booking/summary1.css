@@ -1,0 +1,86 @@
+#imag {
+
+    background-image: url(taj.jpg);
+}
+
+a.nav-link {
+    color: white;
+    font-weight: 620;
+    font-size: larger;
+}
+
+a.nav-link:hover {
+    background: slategray;
+}
+
+.summary_login {
+	font-size: 20px;
+}
+
+.card {
+	margin-bottom: 20px;
+}
+
+
+#passenger_details {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	/*border-top: 1px solid black;*/
+}
+
+#booking_details {
+	/*border-right: 1px solid black;*/
+	border: 1px solid beige;
+
+}
+
+#btn_otp {
+	margin-left: 4px;
+}
+
+.div.form-row {
+	margin-bottom: 3px;
+}
+
+
+.timer {
+	border-bottom: 1px solid gray;
+}
+
+#vehicle_name {
+	margin-bottom: 0;
+}
+
+.end_vehicle_data {
+	padding-bottom: 8px;
+	border-bottom: 1px solid gray;
+}
+
+.from_data {
+	padding-top: 5px;
+}
+
+.to_data {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid gray;
+}
+
+#fare_bottom_line {
+	padding-bottom: 5px;
+	/*border-bottom: 1px solid gray;*/
+}
+
+.btn_custom_payment {
+	font-size: 20px;
+}
+
+.container-payment-button {  
+	text-align: center;  
+	/*border: 7px solid red; */ 
+	width: 300px;  
+	height: 60px;  
+	padding-top: 10px;  
+}  
+
+ 

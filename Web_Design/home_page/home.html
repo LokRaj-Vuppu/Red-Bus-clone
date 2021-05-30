@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+    <!-- FontAwesome -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Home Page</title>
+  </head>
+  <body>
+
+
+  		
+
+
+  		<div class="main_content global-header" id="imag">
+   
+	  		<nav class="navbar navbar-expand-sm">
+	  			 <div class="container-fluid">
+	  			 <span class="navbar-brand mb-0 h1" style="color:white;">DekhoBus</span>
+	  
+	        <ul class="navbar-nav ml-auto">
+	           
+	            <li class="nav-item">
+	                <a class="nav-link" href="#">
+	                  My Bookings
+	                </a>
+	            </li>
+	             <li class="nav-item">
+	                <a class="nav-link" href="#">
+	                  Login/Register
+	                </a>
+	            </li>
+	        </ul>
+	        </div>
+	    </nav>
+		  
+
+
+	    <h2 class="bus_text">Book Bus Tickets</h2>
+
+	   <div class="selection_buttons">
+	   	  <a class="btn btn-info btn-lg" id="bus_form" href="#" role="button">Bus</a>
+	      <a class="btn btn-info btn-lg" id="car_form" href="#" role="button">Car</a>
+	   </div>
+
+	    
+     <!-- Form for Bus Booking  -->
+
+	    <div class="container form_container">
+	    	<form id="bus">
+		  <div class="form-row">
+		    <div class="col">
+		      <input type="text" class="form-control resizedTextbox" placeholder="Leaving From">
+		    </div>
+		    <div class="col">
+		      <input type="text" class="form-control resizedTextbox" placeholder="Going To">
+		    </div>
+		     <div class="col">
+		      <input type="text" class="form-control resizedTextbox" placeholder="Date of Journey" onfocus="(this.type='date')">
+		    </div>
+		     <div class="col">
+		      <input type="text" id="formStyle" class="form-control resizedTextbox" placeholder="Date of Return(Optional)" onfocus="(this.type='date')">
+		    </div>
+
+		    <div class="col">
+		       <a class="btn btn-primary btn-lg resizedTextbox" id="btn_search" href="#" role="button">Search</a>
+		    </div>
+
+		  </div>
+		</form>
+	    
+
+
+      <!-- Form for Car Booking -->
+
+
+
+      
+        <form id="car">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control resizedTextbox" placeholder="City">
+        </div>
+       
+         <div class="col">
+          <input type="text" class="form-control resizedTextbox" placeholder="Start Date" onfocus="(this.type='date')">
+        </div>
+         <div class="col">
+          <input type="text" class="form-control resizedTextbox" placeholder="End Date" onfocus="(this.type='date')">
+        </div>
+
+        <div class="col">
+           <a class="btn btn-primary btn-lg resizedTextbox" id="btn_search" href="#" role="button">Search</a>
+        </div>
+
+      </div>
+    </form>
+      </div>
+
+
+
+
+
+
+	  	
+		
+	</div>
+
+	
+
+
+
+
+	<img class="supportImageData" src="data.png" alt="Unable to Load">
+
+
+	<!-- Carousel Card Slider Start -->
+
+
+	
+
+    <section class="pt-5 pb-5">
+          <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="mb-3">Checkout Our Exicting Offers </h3>
+                </div>
+                <div class="col-6 text-right">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280" src="mobiqwik.png">
+                                            <div class="card-body">
+                                                <h4 class="card-text">Get Intanst Discount of Rs.100</h4>
+                                                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280" src="ola.png">
+                                            <div class="card-body">
+                                                <h4 class="card-text">Get Cashback upto Rs. 500 on ola Money</h4>
+                                                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280" src="freecharge.png">
+                                            <div class="card-body">
+                                                <h4 class="card-text">Get an Assured Cashback of Rs. 75</h4>
+                                               <!--  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+ -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+	<!-- Carousal Card Slider End -->
+
+
+	<!-- Footer Start -->
+
+	<!-- Footer -->
+<footer class="bg-dark text-center text-white" id="footr">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-facebook-official" aria-hidden="true"></i>
+      </a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-google" aria-hidden="true"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-github" aria-hidden="true"></i></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" placeholder="Email Address" />
+              
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        DekhoBus is the world's largest online bus ticket booking service trusted by over 9 million happy customers globally. 
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">About dekhobus</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">About us</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Contact Us</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">T & C</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Popular Bus Routes</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Chennai To Bangalore</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Hyderabad To Bangalore</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Mumbai To Pune</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Pune To Ahmedabad</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Popular Bus Operators</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">GreehLine Travels</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">KMBT Travels</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Orange Travels</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Red Travels</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">dekhobus.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+
+		
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+    <script>
+	   (function($){
+		   "use strict";
+		   $('.next').click(function(){ $('.carousel').carousel('next');return false; });
+		   $('.prev').click(function(){ $('.carousel').carousel('prev');return false; });
+	   })	
+	   (jQuery);
+	</script>
+
+	<script type="text/javascript" src="run.js"></script>
+
+  
+  </body>
+</html>

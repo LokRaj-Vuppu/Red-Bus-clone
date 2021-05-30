@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="summary1.css">
+
+    <title>Booking Summary</title>
+  </head>
+  <body>
+    
+
+    <!-- Nav bar start -->
+
+        <nav class="navbar navbar-expand-sm" id="imag">
+           <div class="container-fluid">
+           <span class="navbar-brand mb-0 h1" style="color:white;">DekhoBus</span>
+    
+          <ul class="navbar-nav ml-auto">
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    My Bookings
+                  </a>
+              </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Login/Register
+                  </a>
+              </li>
+          </ul>
+          </div>
+      </nav>
+
+
+    <!-- Nav bar Ends -->
+
+    <div class="container-fluid">
+      <div class="row">
+
+            <div class="col">
+              <h1 id="passenger_details">Passenger Details</h1>
+            </div>
+          </div>
+    </div>
+
+    <!-- Summary grid starts -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-8">
+          
+
+          <!-- card start -->
+
+          <div class="card">
+            <div class="card-body">
+
+              <p class="summary_login">Login(to avail benefits and offers)</sub></p>
+
+              <form class="form-inline">
+                
+                <div class="form-group">
+                  
+                  <input type="text" class="form-control" id="mobile" placeholder="Mobile number">
+                </div>
+
+                <button type="submit" class="btn btn-danger" id="btn_otp">Send OTP</button>
+              </form>
+              
+            </div>
+          </div>
+
+          <!-- Card 2 for emergency contact details -->
+
+            <div class="card">
+              <div class="card-body">
+
+                <p>Enter Contact details ( Your booking details will be sent to your email address and contact no. ) </p>
+
+                <!-- Form for taking contact details -->
+
+                <form>
+                  <div class="form-row">
+                    <div class="col-4">
+                      <input type="text" class="form-control" id="booking_email" placeholder="Email ID">
+                    </div>
+                    <div class="col-4">
+                      <input type="text" class="form-control" id="booking_mobile" placeholder="Mobile No.">
+                    </div>
+                    <!-- <div class="col-4">
+                      <input type="text" class="form-control" placeholder="Zip">
+                    </div> -->
+                  </div>
+                </form>
+                
+              </div>
+            </div>
+
+            <!-- card 2 ends here -->
+
+            <!-- Card 2 starts here -->
+
+            <div class="card">
+              <div class="card-body">
+                <p>Enter Passenger Details</p>
+                
+                 <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                      <input type="text" class="form-control mb-2 mr-lg-2" name="passenger_name1" placeholder="Enter Full Name">
+
+                      <input type="text" class="form-control mb-2 mr-lg-2" name="passenger_name2" placeholder="Enter Full Name">
+                    </div>
+              </div>
+
+              </div>
+            </div>
+
+            <!-- Card3 ends here -->
+
+
+          <!-- Grid 2 for ticket summary -->
+
+        </div>
+
+        <div class="col-4" id="booking_details">
+          
+
+          <div class="container-fluid">
+              <h2 class="timer">Booking Summary</h2>
+
+              <h6>Bus Details</h6>
+
+              <p id="vehicle_name">Orange Travels</p>
+              <p id="vehicle_name">A/C Sleeper (2+1)</p>
+              <p id="vehicle_name" class="end_vehicle_data">11:35, 2 june , 2021</p>
+
+              <div class="from_data">
+              <h6>From</h6>
+              
+                <p id="vehicle_name">Chennai</p>
+                <p id="vehicle_name">Koyambedu</p>
+                <p id="vehicle_name">11:35</p>
+              </div>
+
+              <div class="to_data">
+              <h6>To</h6>
+              
+                <p id="vehicle_name">Bangalore</p>
+                <p id="vehicle_name">Electronic city</p>
+                <p id="vehicle_name">18:35</p>
+              </div>
+
+
+              <div class="to_data">
+                <h6>Fare Details</h6>
+
+                <div class="row" id="fare_bottom_line">
+
+                  <div class="col-8">
+
+                    <p id="vehicle_name">Basic Fare </p>
+                    <p id="vehicle_name">Bus Partner GST</p>
+                    <p id="vehicle_name">Service Charge</p>
+
+                    
+                  </div>
+
+                  <div class="col-4">
+
+                    <p id="vehicle_name">₹ 1800.00</p>
+                    <p id="vehicle_name">₹ 123.00</p>
+                    <p id="vehicle_name">₹ 35.00</p>
+                    
+                  </div>
+                  
+                </div>
+
+              </div>
+
+              <div class="row" id="fare_bottom_line">
+
+                  <div class="col-8">
+
+                    <p id="vehicle_name">Total Fare</p>
+                    
+
+                    
+                  </div>
+
+                  <div class="col-4">
+
+                    <p id="vehicle_name">₹ 1958.00</p>
+                    
+                    
+                  </div>
+                  
+                </div>
+
+
+
+
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+        
+        <!-- Proceed button -->
+
+        <div class="container container-payment-button">
+          <button type="button" class="btn btn-info btn_custom_payment">Proceed to Payment</button>
+        </div>
+
+    
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,216 @@
+#imag {
+
+    background-image: url(taj.jpg);
+}
+
+a.nav-link {
+    color: white;
+    font-weight: 620;
+    font-size: larger;
+}
+
+a.nav-link:hover {
+    background: slategray;
+}
+
+.form-control::placeholder {
+    font-size: large;
+    font-style: italic;
+    font-weight: 600;
+    color: black;
+}
+
+.resizedTextbox {
+    height: 50px
+}
+
+#formStyle {
+    width: 240px;
+}
+
+#btn_search {
+    background: #c60001;
+    padding-top: 6px;
+    padding-bottom: 2.5px;
+}
+
+.form_container {
+    padding-top: 30px;
+   
+    padding-bottom: 30px;
+
+}
+
+hr {
+   margin-bottom: 40px;
+}
+
+.sort ul li a {
+    color: black;
+
+    text-decoration: none;
+
+}
+
+.sort ul li {
+    list-style: none;
+    float: left;
+    padding: 10px 32px;
+    /*border-right: 0.5px solid black;*/
+    
+}
+
+
+
+.sort {
+    padding-left: 5%;
+    width: 100%;
+    position: relative;
+    text-align: justify-all;
+    display: inline-block;
+    background: lightgray;
+    font-size: x-large;
+    color: black;
+    
+}
+
+/*#hr_line {
+    border-bottom: 2px solid black;
+}
+*/
+/*#sortby {
+
+    margin-left: 22%;
+}*/
+
+
+
+/*.form-check-label:nth-of-type(1) {
+    padding-top:0px ;
+}
+
+.form-check-label{
+    padding-bottom: 10px;
+}*/
+
+/*input[type=checkbox] {
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}*/
+/*
+input[type=checkbox] {
+    padding-bottom: 5px;
+}*/
+
+/*.form-check .form-switch {
+    padding-bottom: 6px;
+}*/
+
+#filter {
+   /* padding-bottom: 3px;
+    margin: 0px 0px 2px;*/
+}
+
+#departure {
+    font-family: Montserrat;
+    font-weight: 12px;
+    color: #3e3e52;
+    border-top: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 17px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+#bus_type {
+    font-family: Montserrat;
+    font-weight: 12px;
+    color: #3e3e52;
+    border-top: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 17px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+#arrival {
+    font-family: Montserrat;
+    font-weight: 12px;
+    color: #3e3e52;
+     border-top: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 17px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 1px black;    
+    transform: scale(1.02);
+
+}
+
+/*#busName {
+    font-weight: bold;
+    font-size: 20px;
+}*/
+
+/*.card-text p {
+    display: inline;
+}*/
+
+/*#bus_duration {
+    padding-left: 140px;
+}
+*/
+/*#bus_arr_time {
+    padding-left: 100px;
+}
+
+#bus_dept_time {
+    padding-left: 110px;
+}
+
+#bus_ticket_fare {
+    padding-left: 90px;
+}*/
+
+/*#typeDesc {
+    padding-top: 20px;
+}*/
+
+/*#typeDesc {
+    display: block;
+    padding-top:20px ;
+}*/
+
+
+
+#view_tick_btn {
+    /*margin-left: 100px;*/
+    float: right;
+}
+
+.card {
+    margin: 20px 0px 20px;
+}
+
+#busName {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#bus_dept_time {
+    font-weight: bold;
+    font-family: Montserrat;
+    font-size: 19px;
+}
+
+#sort_menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

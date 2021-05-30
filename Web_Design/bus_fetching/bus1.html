@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="bus.css">
+
+    <title>Available Buses</title>
+  </head>
+  <body>
+    
+
+    <div class="main_content global-header" id="imag">
+   
+        <nav class="navbar navbar-expand-sm">
+           <div class="container-fluid">
+           <span class="navbar-brand mb-0 h1" style="color:white;">DekhoBus</span>
+    
+          <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    About
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Contact Us
+                  </a>
+              </li> -->
+              <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    My Bookings
+                  </a>
+              </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Login/Register
+                  </a>
+              </li>
+          </ul>
+          </div>
+      </nav>
+      </div>
+
+
+
+       <div class="container form_container">
+        <form id="bus">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control resizedTextbox" placeholder="Leaving From">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control resizedTextbox" placeholder="Going To">
+        </div>
+         <div class="col">
+          <input type="text" class="form-control resizedTextbox" placeholder="Date of Journey" onfocus="(this.type='date')">
+        </div>
+         <div class="col">
+          <input type="text" id="formStyle" class="form-control resizedTextbox" placeholder="Date of Return(Optional)" onfocus="(this.type='date')">
+        </div>
+
+        <div class="col">
+           <a class="btn btn-primary btn-lg resizedTextbox" id="btn_search" href="#" role="button">Modify Search</a>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+
+    
+    <!-- Bootstrap grid system -->
+
+     <hr>
+
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-2">
+            
+            <h4 id="filter">Filters</h4>
+
+              <!-- Departure Time -->
+
+              
+                
+                <p id="departure">Departure Time</p>
+
+
+
+                <!-- Checkboxes for filters -->
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="departureTimeSwitch1">
+                  <label class="custom-control-label" for="departureTimeSwitch1">Before 6 am</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="departureTimeSwitch2">
+                  <label class="custom-control-label" for="departureTimeSwitch2">6 am to 12 pm</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="departureTimeSwitch3">
+                  <label class="custom-control-label" for="departureTimeSwitch3">12 pm to 6 am</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="departureTimeSwitch4">
+                  <label class="custom-control-label" for="departureTimeSwitch4">After 6 pm</label>
+                </div>
+              
+          
+
+
+          <!-- Bus Types Filter -->
+            <p id="bus_type">Bus Type</p>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="busSwitch1">
+                  <label class="custom-control-label" for="busSwitch1">AC</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="busSwitch2">
+                  <label class="custom-control-label" for="busSwitch2">Non-AC</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="busSwitch3">
+                  <label class="custom-control-label" for="busSwitch3">Seater</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="busSwitch4">
+                  <label class="custom-control-label" for="busSwitch4">Sleeper</label>
+                </div>
+
+              
+
+          <!--Arrival Time Departure  -->
+
+          <p id="arrival">Arrival Time</p>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="arrivalTimeSwitch1">
+                  <label class="custom-control-label" for="arrivalTimeSwitch1">Before 6 am</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="arrivalTimeSwitch2">
+                  <label class="custom-control-label" for="arrivalTimeSwitch2">6 am to 12 pm</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="arrivalTimeSwitch3">
+                  <label class="custom-control-label" for="arrivalTimeSwitch3">12 pm to 6 am</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="arrivalTimeSwitch4">
+                  <label class="custom-control-label" for="arrivalTimeSwitch4">After 6 pm</label>
+                </div>
+
+
+          </div>
+
+          <div class="col-lg-10">
+            <!-- Grid system for  sorting facilities-->
+
+            
+           <div class="container" id="grid_box">
+              <div class="row">
+
+               
+                  
+                  <div class="col-sm-2" >
+                      <b>Sort</b>
+                  </div>
+                  <div class="col-sm-2" id="sort_menu">
+                    <a href="#">Departure</a>
+                  </div>
+                  <div class="col-sm-2" id="sort_menu">
+                    <a href="#">Duration</a>
+                  </div>
+                  <div class="col-sm-2" id="sort_menu">
+                    <a href="#">Arrival</a>
+                  </div>
+                  <div class="col-sm-2" id="sort_menu">
+                    <a href="#">Fare</a>
+                  </div>
+                  <div class="col-sm-2">
+                    
+                  </div>
+            </div>
+         </div>
+          
+        
+
+        <!-- Buses Details -->
+
+        <div class="card">
+            <div class="card-body">
+                <div class="container" id="grid_box">
+                  <div class="row">
+
+                  <div class="col-sm-2">
+                    <p id="busName">Orange Travels</p>
+                    <p id="typeDesc">A/C Sleeper (2+1)</p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_dept_time">11:35 </p>
+                    <p id="boarding_point"> <small>Koyambedu</small></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_duration"> 07h 00m</p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_arr_time">18:35</p>
+                    <p id="droppping_point"><small>Electronic City</small></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_ticket_fare">INR <strong>900</strong></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <a href="#" id="view_tick_btn" class="btn btn-danger">View Seats</a>
+                  </div>
+                
+         
+                    </div>
+                      </div>
+              </div>
+            </div>
+
+            <!-- Second Bus -->
+            <div class="card">
+              <div class="card-body">
+                <div class="container" id="grid_box">
+                  <div class="row">
+
+                  <div class="col-sm-2">
+                    <p id="busName">CMBT Travels</p>
+                    <p id="typeDesc">A/C Seater (2+2)</p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_dept_time">23:00 </p>
+                    <p id="boarding_point"> <small>Broadway</small></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_duration"> 06h 15m</p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_arr_time">05:15</p>
+                    <p id="droppping_point"><small>Silk board</small></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_ticket_fare">INR <strong>850</strong></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <a href="#" id="view_tick_btn" class="btn btn-danger">View Seats</a>
+                  </div>
+                
+         
+                </div>
+              </div>
+          </div>
+        </div>
+        
+
+            <!-- Second bus end -->
+
+        <!-- Third Bus start -->
+
+            <div class="card">
+              <div class="card-body">
+                <div class="container" id="grid_box">
+                  <div class="row">
+
+                  <div class="col-sm-2">
+                    <p id="busName">GreenLine Travels</p>
+                    <p id="typeDesc">Non A/C Sleeper (2+1)</p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_dept_time">4:15 </p>
+                    <p id="boarding_point"> <small>Chennai Central</small></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_duration"> 05h 45m</p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_arr_time">10:00</p>
+                    <p id="droppping_point"><small>Hosur</small></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_ticket_fare">INR <strong>600</strong></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <a href="#" id="view_tick_btn" class="btn btn-danger">View Seats</a>
+                  </div>
+                
+         
+                </div>
+              </div>
+          </div>
+        </div>
+        
+
+        <!-- Third bus end -->
+
+        <!-- Fourth bus start -->
+
+        <div class="card">
+              <div class="card-body">
+                <div class="container" id="grid_box">
+                  <div class="row">
+
+                  <div class="col-sm-2">
+                    <p id="busName">Garuda Travels</p>
+                    <p id="typeDesc">A/C Sleeper (2+1)</p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_dept_time">23:00 </p>
+                    <p id="boarding_point"> <small>Shollinganallur</small></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_duration"> 06h 00m</p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_arr_time">07:00</p>
+                    <p id="droppping_point"><small>Madiwala</small></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <p id="bus_ticket_fare">INR <strong>900</strong></p>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <a href="#" id="view_tick_btn" class="btn btn-danger">View Seats</a>
+                  </div>
+                
+         
+                </div>
+              </div>
+          </div>
+        </div>
+        
+
+        <!-- Fourth bus end -->
+
+
+
+          <!-- Inner grid closing -->
+
+          </div>
+          
+        </div>
+        
+      </div>
+
+
+
+    
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

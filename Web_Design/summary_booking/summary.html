@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ticket Summary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="summary.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+</head>
+<body>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="container p-3 my-3 border">
+      <h5>Login</h5>
+      <form class="form-inline" action="/">
+        <input type="text" id="email" placeholder="Enter Mobile Number" name="email" style="height: 30px; width:220px; ">
+        <button type="submit">Send OTP</button>
+        or
+        <div class="col">
+          <a href="#" class="fb btn">
+            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+          </a>
+          <a href="#" class="google btn">
+            <i class="fa fa-google fa-fw"></i> Login with Google+
+          </a>
+        </div>
+      </form>
+    </div>
+
+  <div class="container p-3 my-3 border">
+    <h5>Enter Contact details</h5>
+    (Your booking details will be send to your email address and contact no. )
+    <form class="form-inline" action="/">
+      <input type="email" id="email" placeholder="Enter Your Email ID" name="email" style="height: 30px; width:280px; ">
+      <input type="text" id="mobile" placeholder="Mobile No" name="mobile" style="height: 30px; width:280px; ">
+      <input type="text" id="emergency" placeholder="Emergency Contact Mobile No" name="emergency" style="height: 30px; width:280px; ">
+    </form>
+    <label>
+      <input type="checkbox" name="remember"> 
+      <i class="fa fa-whatsapp" style="font-size:20px;color:green"></i> Send me booking details on Whatsapp>
+    </label>
+  </div>
+
+  <div class="container p-3 my-3 border">
+      <h5>Enter passenger details</h5>Please review passenger details before making the booking
+      <form class="form-inline" action="/">
+        <input type="text" id="name" placeholder="Enter Full Name" name="name" style="height: 30px; width:280px; ">
+      </form>
+  </div>
+<div class="container p-3 my-3 bg-primary text-white">
+  <ul>
+    <li><p>Get Full Refund upon Cancellation before 6 hours of departure time</p></li>
+    <li><p>Free Cancellation</p></li>
+    <li><p>For more details, Please check Terms and Conditions</p></li>
+  </ul>
+</div>
+
+</div>
+<div class="col-sm-4">
+    <div class="container p-1 my-1 border">
+      <p>time to just bus it</p>
+    </div>
+    <div class="container p-1 my-1 border">
+      <h6>Onward</h6>
+      <p>Bus name </br>Bus type</br>Seat number</br>Date of booking</p>
+    </div>
+    <div class="container p-1 my-1 border">
+      <h6>Source</h6>
+      <p>Starting point</br>time and date</p>
+      <h6>Destination</h6>
+      <p>Dropping point</br>time and date</p>
+    </div>
+    <div class="container p-1 my-1 border">
+      <h6>Fare Details</h6>
+      <p>Basic fare</br>Bus Partner GST</br>Service Charge</p>
+    </div>
+    <div class="container p-1 my-1 border">
+      <h6>Total Fare</h6>
+    </div>
+    <div class="container p-1 my-1 border">
+      <p>Total Discount</br>Bus Partner Discount</p>
+    </div>
+</div>
+</div>  
+
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="car.css">
+
+    <title>Available Cars</title>
+  </head>
+  <body>
+    
+
+    <div class="main_content global-header" id="imag">
+
+
+   
+        <nav class="navbar navbar-expand-sm">
+           <div class="container-fluid">
+           <span class="navbar-brand mb-0 h1" id="main_nav_content">
+             
+            <a href="C:\Users\LENOVO\OneDrive\Documents\tms_screens\Web_Design\car_fetch\home.html"> DekhoBus</a>
+
+           </span>
+    
+          <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    About
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Contact Us
+                  </a>
+              </li> -->
+              <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    My Bookings
+                  </a>
+              </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Login/Register
+                  </a>
+              </li>
+          </ul>
+          </div>
+      </nav>
+      </div>
+
+
+      <!-- Car Modify Search Form -->
+       <div class="container form_container">
+          <form id="car">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control resizedTextbox" placeholder="City">
+        </div>
+       
+         <div class="col">
+          <input type="text" class="form-control resizedTextbox" placeholder="Start Date" onfocus="(this.type='date')">
+        </div>
+         <div class="col">
+          <input type="text" class="form-control resizedTextbox" placeholder="End Date" onfocus="(this.type='date')">
+        </div>
+
+        <div class="col">
+           <a class="btn btn-primary btn-lg resizedTextbox" id="btn_search" href="#" role="button">
+           Modify Search</a>
+        </div>
+
+      </div>
+    </form>
+      </div>
+
+
+      <hr>
+
+      <!-- Grid for filters and sorting features -->
+
+     <div class="container-fluid" id="conatiner_sort_reset">
+        <div class="row">
+          <div class="col-lg-2">
+            
+           
+             <div class="row">
+                <div class="col-lg-6">
+                <p id="filter_text">Filters  </p>
+              </div>
+
+              <div class="col-lg-6">
+                <p id="reset_text">Reset All</p>
+              </div>
+             </div>
+            
+           
+           <!-- <span id="reset">Reset All</span> -->
+
+
+          </div>
+          <div class="col-lg-6">
+           <div class="container">
+
+            <h3>Car Rental in <span id="rental_city">Chennai</span></h3>
+             
+
+
+           </div>
+          </div>
+
+
+          <!-- <div class="colo-lg-2">
+            <h5>Soty by</h5>
+          </div> -->
+
+          <div class="col-lg-4">
+
+            <div class="row">
+              <div class="col-lg-4">
+                <h6>Sort by:</h6>
+              </div>
+              
+            
+            
+            <!-- dropdown for sorting -->
+            
+              <div class="col-lg-4">
+
+            <div class="dropdown">
+              <a class="dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Popularity
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Price: Low to High</a>
+                <a class="dropdown-item" href="#">Price: High to Low</a>
+                
+              </div>
+            </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid system for car filters and Showing available cars -->
+
+
+        <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-2 carFiltersLay" >
+            
+            
+
+              <!-- Departure Time -->
+
+              
+                
+                <p id="segment">Segment</p>
+
+
+
+                <!-- Checkboxes for filters -->
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="hatchbackSwitch1">
+                  <label class="custom-control-label" for="hatchbackSwitch1">Hatchback</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="sedanSwitch2">
+                  <label class="custom-control-label" for="sedanSwitch2">Sedan</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="suvSwitch3">
+                  <label class="custom-control-label" for="suvSwitch3">SUV</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="muvSwitch4">
+                  <label class="custom-control-label" for="muvSwitch4">MUV</label>
+                </div>
+              
+          
+
+
+          <!-- Bus Types Filter -->
+            <p id="brand">Brand</p>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="tataSwitch1">
+                  <label class="custom-control-label" for="tataSwitch1">Tata</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="toyotaSwitch2">
+                  <label class="custom-control-label" for="toyotaSwitch2">Toyota</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="hondaSwitch3">
+                  <label class="custom-control-label" for="hondaSwitch3">Honda</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="fordSwitch4">
+                  <label class="custom-control-label" for="fordSwitch4">Ford</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="mahindraSwitch5">
+                  <label class="custom-control-label" for="mahindraSwitch5">Mahindra</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="hyundaiSwitch6">
+                  <label class="custom-control-label" for="hyundaiSwitch6">Hyundai</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="maruthiSwitch3">
+                  <label class="custom-control-label" for="maruthiSwitch3">Maruthi</label>
+                </div>
+
+              
+
+          <!--Arrival Time Departure  -->
+
+          <p id="fuel_type">Fuel Type</p>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="dieselSwitch1">
+                  <label class="custom-control-label" for="dieselSwitch1">Diesel</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="petrolSwitch2">
+                  <label class="custom-control-label" for="petrolSwitch2">Petrol</label>
+                </div>
+
+                <!-- <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="arrivalTimeSwitch3">
+                  <label class="custom-control-label" for="arrivalTimeSwitch3">12 pm to 6 am</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="arrivalTimeSwitch4">
+                  <label class="custom-control-label" for="arrivalTimeSwitch4">After 6 pm</label>
+                </div> -->
+
+
+                <!-- Transmission Type -->
+
+
+
+                <!-- Seating Capacity -->
+
+                <p id="seating_capacity">Seating Capacity</p>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="5SeaterSwitch1">
+                  <label class="custom-control-label" for="5SeaterSwitch1">5 Seats</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="7SeaterSwitch2">
+                  <label class="custom-control-label" for="7SeaterSwitch2">7 Seats</label>
+                </div>
+
+                <!-- <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="arrivalTimeSwitch3">
+                  <label class="custom-control-label" for="arrivalTimeSwitch3">12 pm to 6 am</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="arrivalTimeSwitch4">
+                  <label class="custom-control-label" for="arrivalTimeSwitch4">After 6 pm</label>
+                </div> -->
+
+
+          </div>
+
+          <!-- Right side Grid -->
+
+          <div class="col-lg-10">
+            
+           <div class="container" id="grid_box">
+
+                
+                  <div class="row">
+                    <div class="col-lg-4">
+                      
+                        <!-- Card1/ car 1 -->
+
+                        <div class="card">
+                          <p class="carNameHeading">Toyota Innova Crysta</p>
+                            <img src="toyota_innova_crysta.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">
+                                
+
+                                <div class="container" id="car_features_grid">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    Automatic
+                                  </div>
+                                  <div class="col-sm">
+                                    Diesel
+                                  </div>
+                                  <div class="col-sm">
+                                    7 Seats
+                                  </div>
+                                </div>
+                              </div>
+
+                              </h6>
+
+                              <p class="card-text">
+                                <p class="rate_display">
+                                  INR <strong>3000</strong>
+                                  <br> per day
+                                </p>
+                              </p>
+                              Extra hour charge @ ₹ 100/km
+
+                              <a href="#" class="btn btn-primary" id="book_car">Book</a>
+                            </div>
+                          </div>
+
+
+
+                    </div>
+
+                    <!-- card 2/  car 2 -->
+
+                    <div class="col-lg-4">
+                      <!-- car2 / card1 -->
+
+                        <div class="card">
+                          <p class="carNameHeading">Maruti Swift</p>
+                          <img src="swift.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <h6 class="card-title">
+                                
+
+                                <div class="container" id="car_features_grid">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    Manual
+                                  </div>
+                                  <div class="col-sm">
+                                    Diesel
+                                  </div>
+                                  <div class="col-sm">
+                                    5 Seats
+                                  </div>
+                                </div>
+                              </div>
+
+                              </h6>
+
+                              <p class="card-text">
+                                <p class="rate_display">
+                                  INR <strong>1999</strong>
+                                  <br> per day
+                                </p>
+                              </p>
+                              Extra hour charge @ ₹ 100/km
+
+                              <a href="#" class="btn btn-primary" id="book_car">Book</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- card /car 3 -->
+                    <div class="col-lg-4">
+                      <!-- car3 / card3 -->
+
+                      <div class="card" >
+                        <p class="carNameHeading">Mahindra XUV 300</p>
+                        <img src="xuv300.png" class="card-img-top" alt="...">
+                       <div class="card-body">
+                              <h6 class="card-title">
+                                
+
+                                <div class="container" id="car_features_grid">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    Automatic
+                                  </div>
+                                  <div class="col-sm">
+                                    Petrol
+                                  </div>
+                                  <div class="col-sm">
+                                    7 Seats
+                                  </div>
+                                </div>
+                              </div>
+
+                              </h6>
+
+                              <p class="card-text">
+                                <p class="rate_display">
+                                  INR <strong>3500</strong>
+                                  <br> per day
+                                </p>
+                              </p>
+                              Extra hour charge @ ₹ 100/km
+
+                              <a href="#" class="btn btn-primary" id="book_car">Book</a>
+                            </div>
+                      </div>
+
+                      <!-- Second row of cars -->
+
+
+
+
+                      <!-- End Major Grid -->
+
+                    </div>
+                  </div>
+                
+                <!-- Row Grid -->
+
+                <div class="row">
+                    <div class="col-lg-4">
+                      
+                        <!-- Card1/ car 1 -->
+
+                        <div class="card">
+                          <p class="carNameHeading">Ford EcoSport</p>
+                            <img src="ecosport.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">
+                                
+
+                                <div class="container" id="car_features_grid">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    Manual
+                                  </div>
+                                  <div class="col-sm">
+                                    Diesel
+                                  </div>
+                                  <div class="col-sm">
+                                    7 Seats
+                                  </div>
+                                </div>
+                              </div>
+
+                              </h6>
+
+                              <p class="card-text">
+                                <p class="rate_display">
+                                  INR <strong>3400</strong>
+                                  <br> per day
+                                </p>
+                              </p>
+                              Extra hour charge @ ₹ 100/km
+
+                              <a href="#" class="btn btn-primary" id="book_car">Book</a>
+                            </div>
+                          </div>
+
+
+
+                    </div>
+
+                    <!-- card 2/  car 2 -->
+
+                    <div class="col-lg-4">
+                      <!-- car2 / card1 -->
+
+                        <div class="card">
+                          <p class="carNameHeading">Honda City AT</p>
+                          <img src="honda_city.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <h6 class="card-title">
+                                
+
+                                <div class="container" id="car_features_grid">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    Automatic
+                                  </div>
+                                  <div class="col-sm">
+                                    Petrol
+                                  </div>
+                                  <div class="col-sm">
+                                    5 Seats
+                                  </div>
+                                </div>
+                              </div>
+
+                              </h6>
+
+                              <p class="card-text">
+                                <p class="rate_display">
+                                  INR <strong>1899</strong>
+                                  <br> per day
+                                </p>
+                              </p>
+                              Extra hour charge @ ₹ 100/km
+
+                              <a href="#" class="btn btn-primary" id="book_car">Book</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- card /car 3 -->
+                    <div class="col-lg-4">
+                      <!-- car3 / card3 -->
+
+                      <div class="card" >
+                        <p class="carNameHeading">Renault Duster</p>
+                        <img src="duster.png" class="card-img-top" alt="...">
+                       <div class="card-body">
+                              <h6 class="card-title">
+                                
+
+                                <div class="container" id="car_features_grid">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    Manual
+                                  </div>
+                                  <div class="col-sm">
+                                    Petrol
+                                  </div>
+                                  <div class="col-sm">
+                                    5 Seats
+                                  </div>
+                                </div>
+                              </div>
+
+                              </h6>
+
+                              <p class="card-text">
+                                <p class="rate_display">
+                                  INR <strong>2200</strong>
+                                  <br> per day
+                                </p>
+                              </p>
+                              Extra hour charge @ ₹ 100/km
+
+                              <a href="#" class="btn btn-primary" id="book_car">Book</a>
+                            </div>
+                      </div>
+
+                      <!-- Second row of cars -->
+
+
+
+
+                      <!-- End Major Grid -->
+
+                    </div>
+                  </div>
+
+                  <!-- Third row of cars -->
+
+                  <div class="row">
+                    <div class="col-lg-4">
+                      
+                        <!-- Card1/ car 1 -->
+
+                        <div class="card">
+                          <p class="carNameHeading">Maruti Alto</p>
+                            <img src="maruti_alto.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">
+                                
+
+                                <div class="container" id="car_features_grid">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    Manual
+                                  </div>
+                                  <div class="col-sm">
+                                    Petrol
+                                  </div>
+                                  <div class="col-sm">
+                                    5 Seats
+                                  </div>
+                                </div>
+                              </div>
+
+                              </h6>
+
+                              <p class="card-text">
+                                <p class="rate_display">
+                                  INR <strong>1699</strong>
+                                  <br> per day
+                                </p>
+                              </p>
+                              Extra hour charge @ ₹ 100/km
+
+                              <a href="#" class="btn btn-primary" id="book_car">Book</a>
+                            </div>
+                          </div>
+
+
+
+                    </div>
+
+                    <!-- card 2/  car 2 -->
+
+                    <div class="col-lg-4">
+                      <!-- car2 / card1 -->
+
+                        <div class="card">
+                          <p class="carNameHeading">Maruti Celerio</p>
+                          <img src="maruti_celerio.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <h6 class="card-title">
+                                
+
+                                <div class="container" id="car_features_grid">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    Manual
+                                  </div>
+                                  <div class="col-sm">
+                                    Petrol
+                                  </div>
+                                  <div class="col-sm">
+                                    5 Seats
+                                  </div>
+                                </div>
+                              </div>
+
+                              </h6>
+
+                              <p class="card-text">
+                                <p class="rate_display">
+                                  INR <strong>2099</strong>
+                                  <br> per day
+                                </p>
+                              </p>
+                              Extra hour charge @ ₹ 100/km
+
+                              <a href="#" class="btn btn-primary" id="book_car">Book</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- card /car 3 -->
+                    <div class="col-lg-4">
+                      <!-- car3 / card3 -->
+
+                      <div class="card" >
+                        <p class="carNameHeading">Hyundai Creta</p>
+                        <img src="hyundai_create.png" class="card-img-top" alt="...">
+                       <div class="card-body">
+                              <h6 class="card-title">
+                                
+
+                                <div class="container" id="car_features_grid">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    Manual
+                                  </div>
+                                  <div class="col-sm">
+                                    Petrol
+                                  </div>
+                                  <div class="col-sm">
+                                    5 Seats
+                                  </div>
+                                </div>
+                              </div>
+
+                              </h6>
+
+                              <p class="card-text">
+                                <p class="rate_display">
+                                  INR <strong>2199</strong>
+                                  <br> per day
+                                </p>
+                              </p>
+                              Extra hour charge @ ₹ 100/km
+
+                              <a href="#" class="btn btn-primary" id="book_car">Book</a>
+                            </div>
+                      </div>
+
+                      <!-- Second row of cars -->
+
+
+
+
+                      <!-- End Major Grid -->
+
+                    </div>
+                  </div>
+
+
+
+
+          <!-- Inner grid closing -->
+
+          <!-- Closing all grids -->
+          </div>
+          </div>
+          </div>
+        </div>
+        
+      
+
+
+
+
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
